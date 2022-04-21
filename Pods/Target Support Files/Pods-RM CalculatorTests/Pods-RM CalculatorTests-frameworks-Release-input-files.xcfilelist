@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-RM CalculatorTests/Pods-RM CalculatorTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework
+${BUILT_PRODUCTS_DIR}/Workflow/Workflow.framework
+${BUILT_PRODUCTS_DIR}/WorkflowReactiveSwift/WorkflowReactiveSwift.framework
+${BUILT_PRODUCTS_DIR}/WorkflowReactiveSwiftTesting/WorkflowReactiveSwiftTesting.framework
+${BUILT_PRODUCTS_DIR}/WorkflowTesting/WorkflowTesting.framework

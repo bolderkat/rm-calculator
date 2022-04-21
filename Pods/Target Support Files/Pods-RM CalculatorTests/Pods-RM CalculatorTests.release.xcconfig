@@ -1,0 +1,15 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks" "${PODS_CONFIGURATION_BUILD_DIR}/BlueprintUI" "${PODS_CONFIGURATION_BUILD_DIR}/BlueprintUICommonControls" "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveSwift" "${PODS_CONFIGURATION_BUILD_DIR}/Workflow" "${PODS_CONFIGURATION_BUILD_DIR}/WorkflowReactiveSwift" "${PODS_CONFIGURATION_BUILD_DIR}/WorkflowReactiveSwiftTesting" "${PODS_CONFIGURATION_BUILD_DIR}/WorkflowTesting" "${PODS_CONFIGURATION_BUILD_DIR}/WorkflowUI"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BlueprintUI/BlueprintUI.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/BlueprintUICommonControls/BlueprintUICommonControls.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveSwift/ReactiveSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Workflow/Workflow.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WorkflowReactiveSwift/WorkflowReactiveSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WorkflowReactiveSwiftTesting/WorkflowReactiveSwiftTesting.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WorkflowTesting/WorkflowTesting.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WorkflowUI/WorkflowUI.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift "$(PLATFORM_DIR)/Developer/Library/Frameworks" '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
+OTHER_LDFLAGS = $(inherited) -framework "BlueprintUI" -framework "BlueprintUICommonControls" -framework "ReactiveSwift" -framework "Workflow" -framework "WorkflowReactiveSwift" -framework "WorkflowReactiveSwiftTesting" -framework "WorkflowTesting" -framework "WorkflowUI" -framework "XCTest" -weak_framework "SwiftUI"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

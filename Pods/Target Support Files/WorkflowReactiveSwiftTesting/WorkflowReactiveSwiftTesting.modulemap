@@ -1,0 +1,6 @@
+framework module WorkflowReactiveSwiftTesting {
+  umbrella header "WorkflowReactiveSwiftTesting-umbrella.h"
+
+  export *
+  module * { export * }
+}

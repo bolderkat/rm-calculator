@@ -1,0 +1,6 @@
+framework module WorkflowTesting {
+  umbrella header "WorkflowTesting-umbrella.h"
+
+  export *
+  module * { export * }
+}
