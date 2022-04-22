@@ -1,0 +1,52 @@
+PODS:
+  - BlueprintUI (0.39.0)
+  - BlueprintUICommonControls (0.39.0):
+    - BlueprintUI (= 0.39.0)
+  - ReactiveSwift (7.0.0)
+  - Workflow (1.0.4):
+    - ReactiveSwift (~> 7.0.0)
+  - WorkflowReactiveSwift (1.0.4):
+    - ReactiveSwift (~> 7.0.0)
+    - Workflow (= 1.0.4)
+  - WorkflowReactiveSwiftTesting (1.0.4):
+    - Workflow (= 1.0.4)
+    - WorkflowReactiveSwift (= 1.0.4)
+    - WorkflowTesting (= 1.0.4)
+  - WorkflowTesting (1.0.4):
+    - Workflow (= 1.0.4)
+  - WorkflowUI (1.0.4):
+    - Workflow (= 1.0.4)
+
+DEPENDENCIES:
+  - BlueprintUI
+  - BlueprintUICommonControls
+  - Workflow
+  - WorkflowReactiveSwift
+  - WorkflowReactiveSwiftTesting
+  - WorkflowTesting
+  - WorkflowUI
+
+SPEC REPOS:
+  trunk:
+    - BlueprintUI
+    - BlueprintUICommonControls
+    - ReactiveSwift
+    - Workflow
+    - WorkflowReactiveSwift
+    - WorkflowReactiveSwiftTesting
+    - WorkflowTesting
+    - WorkflowUI
+
+SPEC CHECKSUMS:
+  BlueprintUI: 2f779972f47f0161ac49e09524bcc542210aea84
+  BlueprintUICommonControls: 46cef97b74b34d5c70683dd070032965ca3d4a85
+  ReactiveSwift: 48c4b9d3b497e8dd20b10300bb1a28ff93550f13
+  Workflow: efde0892900402f61a1a09268cca741c27d28016
+  WorkflowReactiveSwift: b7355227452002d07e618af1a98a91fca69230fb
+  WorkflowReactiveSwiftTesting: 787106f5904b4e8e68b2f4f4a4cf628456763775
+  WorkflowTesting: cc31eccb65a083df15780d877d238a42bd7bb398
+  WorkflowUI: db8ccb53172746a8b0ca839f9fc9bdbc0e2541c3
+
+PODFILE CHECKSUM: 887970d811f6881aef91c3f7b76d3facff97195f
+
+COCOAPODS: 1.11.3
