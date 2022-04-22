@@ -8,6 +8,30 @@
 import Foundation
 
 enum Strings {
+    static let entryViewTitle = NSLocalizedString(
+        "entryViewTitle",
+        bundle: .main,
+        value: "Edit Entry",
+        comment: "Placeholder value for exercise entry field."
+    )
+    static let backButtonTitle = NSLocalizedString(
+        "backButtonTitle",
+        bundle: .main,
+        value: "Back",
+        comment: "Title for back button."
+    )
+    static let cancelButtonTitle = NSLocalizedString(
+        "cancelButtonTitle",
+        bundle: .main,
+        value: "Cancel",
+        comment: "Title for cancel button."
+    )
+    static let saveButtonTitle = NSLocalizedString(
+        "saveButtonTitle",
+        bundle: .main,
+        value: "Save",
+        comment: "Title for save button."
+    )
     static let exerciseTextFieldPlaceholder = NSLocalizedString(
         "exerciseTextFieldPlaceholder",
         bundle: .main,

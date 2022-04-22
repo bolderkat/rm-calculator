@@ -7,6 +7,7 @@
 
 import Foundation
 import Workflow
+import WorkflowUI
 
 struct EntryWorkflow: Workflow {
     // MARK: Input
@@ -118,11 +119,27 @@ extension EntryWorkflow {
 
 // MARK: Rendering
 extension EntryWorkflow {
-    typealias Rendering = EntryScreen
+    typealias Rendering = BackStackScreen<EntryScreen>
     
     func render(state: State, context: RenderContext<EntryWorkflow>) -> Rendering {
         let sink = context.makeSink(of: Action.self)
-        return EntryScreen(
+        let barContent = BackStackScreen<EntryScreen>.BarContent(
+            title: Strings.entryViewTitle,
+            leftItem: .button(
+                .cancel {
+                    sink.send(.didTapCancel)
+                }),
+            rightItem: .button(
+                .init(
+                    content: .text(Strings.saveButtonTitle),
+                    handler: {
+                        sink.send(.didTapSave)
+                    }
+                )
+            )
+        )
+        
+        let entryScreen = EntryScreen(
             exercise: state.exercise,
             repsTextField: state.repsTextField,
             weightTextField: state.weightTextField,
@@ -136,5 +153,12 @@ extension EntryWorkflow {
                 sink.send(.didEditWeight(weight))
             }
         )
+        
+        let backStackItem = BackStackScreen.Item(
+            screen: entryScreen,
+            barContent: barContent
+        )
+        
+        return BackStackScreen(items: [backStackItem])
     }
 }

@@ -22,6 +22,9 @@
 		35F35AE028121DDC0054A165 /* RM_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F35ADF28121DDC0054A165 /* RM_CalculatorUITestsLaunchTests.swift */; };
 		35F3EB972813135200FA3855 /* NumericEntryBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3EB962813135200FA3855 /* NumericEntryBox.swift */; };
 		35F3EB992813152800FA3855 /* RepWeightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3EB982813152800FA3855 /* RepWeightRow.swift */; };
+		35F3EBA028135F1A00FA3855 /* BackStackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3EB9F28135F1A00FA3855 /* BackStackScreen.swift */; };
+		35F3EBA228135F3600FA3855 /* BackStackContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3EBA128135F3600FA3855 /* BackStackContainer.swift */; };
+		35F3EBA528135F7F00FA3855 /* ScreenWrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3EBA428135F7F00FA3855 /* ScreenWrapperViewController.swift */; };
 		86C9421B4876728C6735DA4F /* Pods_RM_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B97E05D2C6697EFA44B181 /* Pods_RM_Calculator.framework */; };
 		9EFEC19638C46F41D35BD845 /* Pods_RM_Calculator_RM_CalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8930ECB1927FC76495C41D8D /* Pods_RM_Calculator_RM_CalculatorUITests.framework */; };
 		CB60A29882D22FE4962A5115 /* Pods_RM_CalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5246143DD419D8099AD964E /* Pods_RM_CalculatorTests.framework */; };
@@ -68,6 +71,10 @@
 		35F35ADF28121DDC0054A165 /* RM_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RM_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		35F3EB962813135200FA3855 /* NumericEntryBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericEntryBox.swift; sourceTree = "<group>"; };
 		35F3EB982813152800FA3855 /* RepWeightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepWeightRow.swift; sourceTree = "<group>"; };
+		35F3EB9A2813252900FA3855 /* WorkflowUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WorkflowUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35F3EB9F28135F1A00FA3855 /* BackStackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackStackScreen.swift; path = "RM Calculator/WorkflowUI Helpers/BackStackScreen.swift"; sourceTree = SOURCE_ROOT; };
+		35F3EBA128135F3600FA3855 /* BackStackContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackStackContainer.swift; path = "RM Calculator/WorkflowUI Helpers/BackStackContainer.swift"; sourceTree = SOURCE_ROOT; };
+		35F3EBA428135F7F00FA3855 /* ScreenWrapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScreenWrapperViewController.swift; path = ../ScreenWrapperViewController.swift; sourceTree = "<group>"; };
 		40B75971131A96F5FC71325E /* Pods-RM CalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RM CalculatorTests.release.xcconfig"; path = "Target Support Files/Pods-RM CalculatorTests/Pods-RM CalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		435D215232F383F2F6FB0B4A /* Pods-PR CalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PR CalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-PR CalculatorTests/Pods-PR CalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		54B97E05D2C6697EFA44B181 /* Pods_RM_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RM_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +152,7 @@
 		35F35ABB28121DDB0054A165 /* RM Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				35F3EB9E28135EFC00FA3855 /* WorkflowUI Helpers */,
 				35E93EDD2812345800ED0ABD /* Screens */,
 				35F35ABC28121DDB0054A165 /* AppDelegate.swift */,
 				35F35ABE28121DDB0054A165 /* SceneDelegate.swift */,
@@ -176,9 +184,28 @@
 			path = "RM CalculatorUITests";
 			sourceTree = "<group>";
 		};
+		35F3EB9E28135EFC00FA3855 /* WorkflowUI Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				35F3EBA6281360A900FA3855 /* BackStack */,
+			);
+			path = "WorkflowUI Helpers";
+			sourceTree = "<group>";
+		};
+		35F3EBA6281360A900FA3855 /* BackStack */ = {
+			isa = PBXGroup;
+			children = (
+				35F3EB9F28135F1A00FA3855 /* BackStackScreen.swift */,
+				35F3EBA128135F3600FA3855 /* BackStackContainer.swift */,
+				35F3EBA428135F7F00FA3855 /* ScreenWrapperViewController.swift */,
+			);
+			path = BackStack;
+			sourceTree = "<group>";
+		};
 		71AE26F4C8E73AEA481B8272 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35F3EB9A2813252900FA3855 /* WorkflowUI.framework */,
 				54B97E05D2C6697EFA44B181 /* Pods_RM_Calculator.framework */,
 				8930ECB1927FC76495C41D8D /* Pods_RM_Calculator_RM_CalculatorUITests.framework */,
 				B5246143DD419D8099AD964E /* Pods_RM_CalculatorTests.framework */,
@@ -466,8 +493,11 @@
 				35E9B3F928130DB600ED0ABD /* Strings.swift in Sources */,
 				35F35AC128121DDB0054A165 /* RootViewController.swift in Sources */,
 				35F3EB992813152800FA3855 /* RepWeightRow.swift in Sources */,
+				35F3EBA228135F3600FA3855 /* BackStackContainer.swift in Sources */,
 				35F35ABD28121DDB0054A165 /* AppDelegate.swift in Sources */,
 				35F35ABF28121DDB0054A165 /* SceneDelegate.swift in Sources */,
+				35F3EBA528135F7F00FA3855 /* ScreenWrapperViewController.swift in Sources */,
+				35F3EBA028135F1A00FA3855 /* BackStackScreen.swift in Sources */,
 				35E93EDF2812346D00ED0ABD /* TextEntryBox.swift in Sources */,
 				35E93ED82812285900ED0ABD /* EntryWorkflow.swift in Sources */,
 				35F3EB972813135200FA3855 /* NumericEntryBox.swift in Sources */,
