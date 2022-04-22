@@ -31,7 +31,7 @@ struct EntryScreen: Screen {
             
             addRow(
                 TextEntryBox(
-                    placeholder: "Ex: Squat, Deadlift, Bench...",
+                    placeholder: Strings.exerciseTextFieldPlaceholder,
                     entry: exercise,
                     didUpdateEntry: didUpdateExercise)
             )

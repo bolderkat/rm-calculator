@@ -11,6 +11,7 @@
 		35E93EDA28122AF700ED0ABD /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E93ED928122AF700ED0ABD /* Entry.swift */; };
 		35E93EDC281231DB00ED0ABD /* EntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E93EDB281231DB00ED0ABD /* EntryScreen.swift */; };
 		35E93EDF2812346D00ED0ABD /* TextEntryBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E93EDE2812346D00ED0ABD /* TextEntryBox.swift */; };
+		35E9B3F928130DB600ED0ABD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E9B3F828130DB600ED0ABD /* Strings.swift */; };
 		35F35ABD28121DDB0054A165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F35ABC28121DDB0054A165 /* AppDelegate.swift */; };
 		35F35ABF28121DDB0054A165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F35ABE28121DDB0054A165 /* SceneDelegate.swift */; };
 		35F35AC128121DDB0054A165 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F35AC028121DDB0054A165 /* RootViewController.swift */; };
@@ -50,6 +51,7 @@
 		35E93ED928122AF700ED0ABD /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		35E93EDB281231DB00ED0ABD /* EntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EntryScreen.swift; path = ../EntryScreen.swift; sourceTree = "<group>"; };
 		35E93EDE2812346D00ED0ABD /* TextEntryBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryBox.swift; sourceTree = "<group>"; };
+		35E9B3F828130DB600ED0ABD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		35F35AB928121DDB0054A165 /* RM Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RM Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F35ABC28121DDB0054A165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F35ABE28121DDB0054A165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				35F35ACA28121DDB0054A165 /* Info.plist */,
 				35E93ED72812285900ED0ABD /* EntryWorkflow.swift */,
 				35E93ED928122AF700ED0ABD /* Entry.swift */,
+				35E9B3F828130DB600ED0ABD /* Strings.swift */,
 			);
 			path = "RM Calculator";
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 			files = (
 				35E93EDC281231DB00ED0ABD /* EntryScreen.swift in Sources */,
 				35E93EDA28122AF700ED0ABD /* Entry.swift in Sources */,
+				35E9B3F928130DB600ED0ABD /* Strings.swift in Sources */,
 				35F35AC128121DDB0054A165 /* RootViewController.swift in Sources */,
 				35F35ABD28121DDB0054A165 /* AppDelegate.swift in Sources */,
 				35F35ABF28121DDB0054A165 /* SceneDelegate.swift in Sources */,
