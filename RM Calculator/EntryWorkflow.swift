@@ -23,13 +23,13 @@ struct EntryWorkflow: Workflow {
 extension EntryWorkflow {
     struct State: Equatable {
         var exercise: String
-        var weightTextField: String
-        var weight: Int? {
-            Int(weightTextField)
-        }
         var repsTextField: String
         var reps: Int? {
             Int(repsTextField)
+        }
+        var weightTextField: String
+        var weight: Int? {
+            Int(weightTextField)
         }
         var presentingScreen: PresentingScreen
         
@@ -47,8 +47,8 @@ extension EntryWorkflow {
     func makeInitialState() -> State {
         State(
             exercise: "",
-            weightTextField: "",
             repsTextField: "",
+            weightTextField: "",
             presentingScreen: .none
         )
     }
@@ -124,10 +124,16 @@ extension EntryWorkflow {
         let sink = context.makeSink(of: Action.self)
         return EntryScreen(
             exercise: state.exercise,
-            weightTextField: state.weightTextField,
             repsTextField: state.repsTextField,
+            weightTextField: state.weightTextField,
             didUpdateExercise: { exercise in
                 sink.send(.didEditExercise(exercise))
+            },
+            didUpdateReps: { reps in
+                sink.send(.didEditReps(reps))
+            },
+            didUpdateWeight: { weight in
+                sink.send(.didEditWeight(weight))
             }
         )
     }

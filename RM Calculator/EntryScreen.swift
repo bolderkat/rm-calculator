@@ -13,17 +13,21 @@ import BlueprintUICommonControls
 struct EntryScreen: Screen {
     private enum Metrics {
         static let uniformInset: CGFloat = 24.0
+        static let columnSpacing: CGFloat = 16.0
     }
     
     let exercise: String
-    let weightTextField: String
     let repsTextField: String
+    let weightTextField: String
     let didUpdateExercise: (String) -> Void
+    let didUpdateReps: (String) -> Void
+    let didUpdateWeight: (String) -> Void
     
     func element() -> Element {
         let column = Column { column in
             column.horizontalAlignment = .fill
             column.verticalUnderflow = .justifyToStart
+            column.minimumVerticalSpacing = Metrics.columnSpacing
             
             func addRow(_ element: Element) {
                 column.add(child: element)
@@ -34,6 +38,14 @@ struct EntryScreen: Screen {
                     placeholder: Strings.exerciseTextFieldPlaceholder,
                     entry: exercise,
                     didUpdateEntry: didUpdateExercise)
+            )
+            
+            addRow(
+                RepWeightRow(
+                    repsTextField: repsTextField,
+                    weightTextField: weightTextField,
+                    didUpdateReps: didUpdateReps,
+                    didUpdateWeight: didUpdateWeight)
             )
         }
         

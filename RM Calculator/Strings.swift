@@ -14,4 +14,16 @@ enum Strings {
         value: "Ex: Squat, Deadlift, Bench",
         comment: "Placeholder value for exercise entry field."
     )
+    static let repsTextFieldPlaceholder = NSLocalizedString(
+        "repsTextFieldPlaceholder",
+        bundle: .main,
+        value: "Reps",
+        comment: "Placeholder value for reps entry field."
+    )
+    static let weightTextFieldPlaceholder = NSLocalizedString(
+        "weightTextFieldPlaceholder",
+        bundle: .main,
+        value: "Weight",
+        comment: "Placeholder value for weight entry field."
+    )
 }
