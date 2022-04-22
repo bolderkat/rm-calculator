@@ -23,13 +23,13 @@ struct EntryWorkflow: Workflow {
 extension EntryWorkflow {
     struct State: Equatable {
         var exercise: String
-        var weightTextField: String
-        var weight: Int? {
-            Int(weightTextField)
-        }
         var repsTextField: String
         var reps: Int? {
             Int(repsTextField)
+        }
+        var weightTextField: String
+        var weight: Int? {
+            Int(weightTextField)
         }
         var presentingScreen: PresentingScreen
         
@@ -47,8 +47,8 @@ extension EntryWorkflow {
     func makeInitialState() -> State {
         State(
             exercise: "",
-            weightTextField: "",
             repsTextField: "",
+            weightTextField: "",
             presentingScreen: .none
         )
     }
@@ -118,11 +118,23 @@ extension EntryWorkflow {
 
 // MARK: Rendering
 extension EntryWorkflow {
-    // TODO: Create actual Rendering once Screen is set up
-    typealias Rendering = Void
+    typealias Rendering = EntryScreen
     
-    func render(state: State, context: RenderContext<EntryWorkflow>) -> Void {
-        print("Exercise: \(state.exercise)\n Weight: \(state.weightTextField)\n Reps: \(state.repsTextField)"
+    func render(state: State, context: RenderContext<EntryWorkflow>) -> Rendering {
+        let sink = context.makeSink(of: Action.self)
+        return EntryScreen(
+            exercise: state.exercise,
+            repsTextField: state.repsTextField,
+            weightTextField: state.weightTextField,
+            didUpdateExercise: { exercise in
+                sink.send(.didEditExercise(exercise))
+            },
+            didUpdateReps: { reps in
+                sink.send(.didEditReps(reps))
+            },
+            didUpdateWeight: { weight in
+                sink.send(.didEditWeight(weight))
+            }
         )
     }
 }
