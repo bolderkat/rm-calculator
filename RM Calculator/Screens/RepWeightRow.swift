@@ -18,6 +18,7 @@ struct RepWeightRow: ProxyElement {
         Row { row in
             row.verticalAlignment = .fill
             row.horizontalUnderflow = .justifyToStart
+            row.minimumHorizontalSpacing = 24.0
             
             func addColumn(_ element: Element) {
                 row.add(child: element)
