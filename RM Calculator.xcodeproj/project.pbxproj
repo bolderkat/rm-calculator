@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E93ED82812285900ED0ABD /* EntryWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E93ED72812285900ED0ABD /* EntryWorkflow.swift */; };
+		35E93EDA28122AF700ED0ABD /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E93ED928122AF700ED0ABD /* Entry.swift */; };
 		35F35ABD28121DDB0054A165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F35ABC28121DDB0054A165 /* AppDelegate.swift */; };
 		35F35ABF28121DDB0054A165 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F35ABE28121DDB0054A165 /* SceneDelegate.swift */; };
 		35F35AC128121DDB0054A165 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F35AC028121DDB0054A165 /* RootViewController.swift */; };
@@ -42,6 +44,8 @@
 		17D47A41C9DA089A330FF729 /* Pods-PR Calculator-PR CalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PR Calculator-PR CalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-PR Calculator-PR CalculatorUITests/Pods-PR Calculator-PR CalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1B1B0D18966ED19C8BF4A5F2 /* Pods-PR Calculator-PR CalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PR Calculator-PR CalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-PR Calculator-PR CalculatorUITests/Pods-PR Calculator-PR CalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		259CDDA51D71A1C87B9D1474 /* Pods-RM Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RM Calculator.release.xcconfig"; path = "Target Support Files/Pods-RM Calculator/Pods-RM Calculator.release.xcconfig"; sourceTree = "<group>"; };
+		35E93ED72812285900ED0ABD /* EntryWorkflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryWorkflow.swift; sourceTree = "<group>"; };
+		35E93ED928122AF700ED0ABD /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		35F35AB928121DDB0054A165 /* RM Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RM Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F35ABC28121DDB0054A165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F35ABE28121DDB0054A165 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				35F35AC528121DDB0054A165 /* Assets.xcassets */,
 				35F35AC728121DDB0054A165 /* LaunchScreen.storyboard */,
 				35F35ACA28121DDB0054A165 /* Info.plist */,
+				35E93ED72812285900ED0ABD /* EntryWorkflow.swift */,
+				35E93ED928122AF700ED0ABD /* Entry.swift */,
 			);
 			path = "RM Calculator";
 			sourceTree = "<group>";
@@ -432,9 +438,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E93EDA28122AF700ED0ABD /* Entry.swift in Sources */,
 				35F35AC128121DDB0054A165 /* RootViewController.swift in Sources */,
 				35F35ABD28121DDB0054A165 /* AppDelegate.swift in Sources */,
 				35F35ABF28121DDB0054A165 /* SceneDelegate.swift in Sources */,
+				35E93ED82812285900ED0ABD /* EntryWorkflow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

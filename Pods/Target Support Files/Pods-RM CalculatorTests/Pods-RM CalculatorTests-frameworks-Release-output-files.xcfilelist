@@ -1,5 +1,0 @@
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Workflow.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WorkflowReactiveSwift.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WorkflowReactiveSwiftTesting.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WorkflowTesting.framework
