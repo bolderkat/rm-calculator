@@ -118,11 +118,17 @@ extension EntryWorkflow {
 
 // MARK: Rendering
 extension EntryWorkflow {
-    // TODO: Create actual Rendering once Screen is set up
-    typealias Rendering = Void
+    typealias Rendering = EntryScreen
     
-    func render(state: State, context: RenderContext<EntryWorkflow>) -> Void {
-        print("Exercise: \(state.exercise)\n Weight: \(state.weightTextField)\n Reps: \(state.repsTextField)"
+    func render(state: State, context: RenderContext<EntryWorkflow>) -> Rendering {
+        let sink = context.makeSink(of: Action.self)
+        return EntryScreen(
+            exercise: state.exercise,
+            weightTextField: state.weightTextField,
+            repsTextField: state.repsTextField,
+            didUpdateExercise: { exercise in
+                sink.send(.didEditExercise(exercise))
+            }
         )
     }
 }
