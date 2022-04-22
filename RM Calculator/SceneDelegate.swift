@@ -12,11 +12,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ContainerViewController(workflow: EntryWorkflow())
+        window.rootViewController = ContainerViewController(
+            workflow: EntryWorkflow(
+                calculate1RM: { reps, weight in
+                    200
+                }
+            )
+        )
         self.window = window
         window.makeKeyAndVisible()
     }
