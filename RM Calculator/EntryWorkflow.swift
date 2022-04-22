@@ -123,6 +123,22 @@ extension EntryWorkflow {
     
     func render(state: State, context: RenderContext<EntryWorkflow>) -> Rendering {
         let sink = context.makeSink(of: Action.self)
+        let barContent = BackStackScreen<EntryScreen>.BarContent(
+            title: Strings.entryViewTitle,
+            leftItem: .button(
+                .cancel {
+                    sink.send(.didTapCancel)
+                }),
+            rightItem: .button(
+                .init(
+                    content: .text(Strings.saveButtonTitle),
+                    handler: {
+                        sink.send(.didTapSave)
+                    }
+                )
+            )
+        )
+        
         let entryScreen = EntryScreen(
             exercise: state.exercise,
             repsTextField: state.repsTextField,
@@ -138,7 +154,10 @@ extension EntryWorkflow {
             }
         )
         
-        let backStackItem = BackStackScreen.Item(screen: entryScreen)
+        let backStackItem = BackStackScreen.Item(
+            screen: entryScreen,
+            barContent: barContent
+        )
         
         return BackStackScreen(items: [backStackItem])
     }

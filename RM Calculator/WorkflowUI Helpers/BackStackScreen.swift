@@ -124,7 +124,12 @@ extension BackStackScreen.BarContent {
 
         /// Convenience factory for a default back button.
         public static func back(handler: @escaping () -> Void) -> Button {
-            return Button(content: .text("Back"), handler: handler)
+            return Button(content: .text(Strings.backButtonTitle), handler: handler)
+        }
+        
+        /// Convenience factory for a default cancel button.
+        public static func cancel(handler: @escaping () -> Void) -> Button {
+            return Button(content: .text(Strings.cancelButtonTitle), handler: handler)
         }
     }
 }
