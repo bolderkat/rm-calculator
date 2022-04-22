@@ -11,6 +11,9 @@ import BlueprintUI
 import BlueprintUICommonControls
 
 struct EntryScreen: Screen {
+    private enum Metrics {
+        static let uniformInset: CGFloat = 24.0
+    }
     
     let exercise: String
     let weightTextField: String
@@ -18,7 +21,7 @@ struct EntryScreen: Screen {
     let didUpdateExercise: (String) -> Void
     
     func element() -> Element {
-        Column { column in
+        let column = Column { column in
             column.horizontalAlignment = .fill
             column.verticalUnderflow = .justifyToStart
             
@@ -32,7 +35,17 @@ struct EntryScreen: Screen {
                     entry: exercise,
                     didUpdateEntry: didUpdateExercise)
             )
-        }.inset(top: 20, bottom: 20, left: 20, right: 20)
+        }
+        
+        let inset = Inset(
+            uniformInset: Metrics.uniformInset,
+            wrapping: column
+        )
+        
+        var scrollView = ScrollView(wrapping: inset)
+        scrollView.contentSize = .fittingHeight
+        scrollView.alwaysBounceVertical = true
+        return scrollView
     }
     
     
