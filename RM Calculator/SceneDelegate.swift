@@ -18,9 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = ContainerViewController(
             workflow: EntryWorkflow(
-                calculate1RM: { reps, weight in
-                    200
-                }
+                calculate1RM: MaxFormulas.brzycki
             )
         )
         self.window = window
