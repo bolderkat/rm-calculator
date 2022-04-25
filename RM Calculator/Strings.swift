@@ -50,4 +50,13 @@ enum Strings {
         value: "Weight",
         comment: "Placeholder value for weight entry field."
     )
+    static func repMaxLabel(with max: Int) -> String {
+        let repMaxStringFormat = NSLocalizedString(
+            "repMaxStringFormat",
+            bundle: .main,
+            value: "Your estimated 1RM: %i lb",
+            comment: "Label for 1RM calculation result."
+        )
+        return String(format: repMaxStringFormat, max)
+    }
 }

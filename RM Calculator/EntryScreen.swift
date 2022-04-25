@@ -19,9 +19,15 @@ struct EntryScreen: Screen {
     let exercise: String
     let repsTextField: String
     let weightTextField: String
+    let calculated1RM: Int?
     let didUpdateExercise: (String) -> Void
     let didUpdateReps: (String) -> Void
     let didUpdateWeight: (String) -> Void
+    
+    private var maxString: String {
+        guard let max = calculated1RM else { return "" }
+        return Strings.repMaxLabel(with: max)
+    }
     
     func element() -> Element {
         let column = Column { column in
@@ -47,6 +53,8 @@ struct EntryScreen: Screen {
                     didUpdateReps: didUpdateReps,
                     didUpdateWeight: didUpdateWeight)
             )
+            
+            addRow(Centered(Label(text: maxString)))
         }
         
         let inset = Inset(
@@ -67,8 +75,14 @@ struct EntryScreen: Screen {
 }
 
 final class EntryViewController: ScreenViewController<EntryScreen> {
+    let blueprintView = BlueprintView(element: nil)
+
     override func loadView() {
-        let blueprintView = BlueprintView(element: screen.element())
+        blueprintView.element = screen.element()
         self.view = blueprintView
+    }
+    
+    override func screenDidChange(from previousScreen: EntryScreen, previousEnvironment: ViewEnvironment) {
+        blueprintView.element = screen.element()
     }
 }

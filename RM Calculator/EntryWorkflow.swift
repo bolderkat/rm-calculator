@@ -11,7 +11,8 @@ import WorkflowUI
 
 struct EntryWorkflow: Workflow {
     // MARK: Input
-    // Add, if any
+    /// First parameter is reps, second parameter is weight.
+    let calculate1RM: (Int?, Int?) -> Int?
     
     // MARK: Output
     enum Output: Equatable {
@@ -143,6 +144,7 @@ extension EntryWorkflow {
             exercise: state.exercise,
             repsTextField: state.repsTextField,
             weightTextField: state.weightTextField,
+            calculated1RM: calculate1RM(state.reps, state.weight),
             didUpdateExercise: { exercise in
                 sink.send(.didEditExercise(exercise))
             },
